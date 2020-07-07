@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Pier;
+    src: url(assets/fonts/PierSans-Regular.otf);
+  }
+
+#top-section{
+    width: 100%;
+    height: 500px;
+    background-image: url('assets/images/nl-party-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+}
+
+.hero {
+    width: 800px;
+    padding-top: 100px;
+}
+
+h3 {
+    font-family: Pier;
+    font-size: 30pt;
+    color: white;
+    text-align: center;
+}
+
+p{
+    font-family: Pier;
+}
+
+.register{
+    text-align: center;
+    padding: 150px 0;
+    font-size: 20pt;
+    color: black;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 100px;
+}
