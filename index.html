@@ -5,57 +5,97 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="assets/images/nightlife_icon.jpg"/>
+    <link rel="icon" type="image/png" href="assets/images/nightlife_icon.jpg" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="nl2.css">
+    <link rel="stylesheet" href="nl2.css?v2">
     <title>Night Life</title>
 </head>
 
 <body>
     <!-- Image and text -->
-    <nav class="navbar navbar-dark fixed-top" style="background-color: black;">
-        <a class="navbar-brand mx-auto" style="width: 200px;" href="#">
-            <img src="assets/images/nightlife_icon.jpg" width="30" height="30" class="d-inline-block align-top" alt=""
-                loading="lazy">
-            Night Life
-        </a>
-    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color: black; color: white;">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+                <img src="assets/images/nightlife_icon.jpg" style="max-width: 30px;" alt=""> &nbsp; Nightlife
+              </a> 
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> -->
+          <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </nav>
 
     <section id="top-section">
-        <div class="mx-auto hero">
-            <h3>
-                Nightlife let's you know where the party is and if your friends are there.
-            </h3>
-            <br><br>
-            <p style="color: white; text-align: center;font-size: 18pt;" class="mx-auto">
-                It will soon be available on:
-            </p>
-            <br>
-            <div class="d-flex row justify-content-around">
-                <img src="assets/images/apple.png" style="max-width: 200px;" alt="">
-                <img src="assets/images/playstore-logo.png" style="max-width: 200px;" alt="">
+        <div class="row">
+            <div class="col-md-12 mx-auto py-5 center-block">
+                <div class="p-3">
+                    <h3>
+                        Nightlife let's you know where the party <br> is and if your friends are there.
+                    </h3>
+                    <br><br>
+                    <p style="color: white; text-align: center;font-size: 18pt;" class="mx-auto">
+                        It will soon be available on:
+                    </p>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <img src="assets/images/apple.png" class="phone-brands mx-auto d-block mb-3"
+                                alt="">
+                            </div>
+                        <div class="col-md-6 col-sm-12"><img src="assets/images/playstore-logo.png"
+                                class="phone-brands mx-auto d-block mb-3" alt=""></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="register">
-        <p>
-            Know which party is on tonight. See if its 	&#x1F525; or &#x1F44E;. <br> Check if your friends are there. Pull up.
-        </p>
-        <div class="d-flex row justify-content-center mb-5">
-            <img src="assets/images/nl-iphone.png" alt="" style="max-width: 400px;">
-        </div>
-        <p style="padding-top: 50px;">
-            Sign up now and be part of the upcoming beta access!
-        </p>
-        <div class="form-group mx-auto pt-3 d-flex row justify-content-between" style="width: 800px">
-            <input type="email" class="form-control" style="width: 80%;" id="exampleFormControlInput1"
-                placeholder="name@example.com">
-            <button class="btn btn-success" style="width: 15%;" onclick="emailSent()">
-                Send
-            </button>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Know which party is on tonight. See if its &#x1F525; or &#x1F44E;. <br> Check if your friends are there.
+                    Pull up.
+                </p>
+                <div class="d-flex row justify-content-center mb-5">
+                    <img src="assets/images/nl-iphone.png" alt="" style="max-width: 400px;">
+                </div>
+                <p style="padding-top: 50px;">
+                    Sign up now and be part of the upcoming beta access!
+                </p>
+                <div class="row mt-4">
+                    <div class="col-md-4"></div>
+                    <div class="center-block col-md-4">
+                        <input type="email" class="form-control mx-auto d-block"
+                            id="emailInput" placeholder="name@example.com" style="padding: 0 10px">
+                        <button class="btn btn-success mt-4" style="width: 100px;" onclick="emailSent()">
+                            Send
+                        </button>
+                </div>
+                <div class="col-md-4"></div>
+                </div>
+                    
+            </div>
         </div>
     </section>
 
@@ -82,10 +122,11 @@
     <script>
         function emailSent() {
             Swal.fire(
-            'Email sent!',
-            '',
-            'success'
+                'Email sent!',
+                '',
+                'success'
             )
+            document.getElementById('emailInput').value = '';
         }
     </script>
 </body>

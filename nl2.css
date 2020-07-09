@@ -5,16 +5,11 @@
 
 #top-section{
     width: 100%;
-    height: 500px;
+    padding-bottom: 10px;
     background-image: url('assets/images/nl-party-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
-}
-
-.hero {
-    width: 800px;
-    padding-top: 100px;
 }
 
 h3 {
@@ -39,4 +34,24 @@ footer{
     background-color: black;
     color: white;
     height: 100px;
+}
+
+.phone-brands{
+    max-width: 200px;
+    width:100%;
+}
+
+@media only screen and (max-width: 750px) {
+    h3{
+        font-size: 20pt;
+    }
+    .phone-brands{
+        max-width: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .phone-brands{
+        max-width: 150px;
+    }
 }
